@@ -1,5 +1,6 @@
 
 import CallToActionButton from "./CallToActionButton";
+import Pipeline from "./PipelineBackground";
 
 export default function BeforeAfterMarquee() {
   return (
@@ -25,6 +26,8 @@ export default function BeforeAfterMarquee() {
           (they won’t reveal it to you…)
         </p>
       </div>
+
+      <Pipeline />
 
     </section>
   );

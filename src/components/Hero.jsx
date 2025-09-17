@@ -9,7 +9,7 @@ export default function Hero() {
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight mx-auto">
           <span className="block text-black">
             How I Enroll{" "}
-            <span className="text-blue-600">50 High-Ticket Clients</span> Every
+            <span className="text-blue-600 bg-yellow-100">50 High-Ticket Clients</span> Every
             Month in My{" "}
             <span className="text-blue-600">Online Service Business</span>{" "}
             Using an{" "}
@@ -21,7 +21,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <h2 className="my-4 text-[15px] sm:text-sm md:text-base lg:text-lg font-medium text-gray-700 leading-snug mx-auto px-6">
-          And How You Can Copy My Funnel to Consistently Attract Premium Leads — Or You Don’t Pay
+          ( And How You Can Copy My Funnel to Consistently Attract Premium Leads — Or You Don’t Pay )
         </h2>
 
         <KeyBenefits />

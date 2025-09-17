@@ -4,7 +4,7 @@ import snehaProtrait from "../assets/sneha-protrait.jpg";
 import sourav from "../assets/sourav.jpg";
 import prashant from "../assets/prashant.jpg";
 import sula from "../assets/sula.jpg";
-import video1 from "../assets/Video-1.mp4";
+import video1 from "../assets/Video-FounderClub.mp4";
 import video2 from "../assets/Video-2.mp4";
 
 export default function TestimonialsMarquee() {

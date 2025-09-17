@@ -22,15 +22,17 @@ export default function CallToActionButton() {
     >
       <motion.a
         onClick={handleClick}
-        className="relative w-full sm:max-w-2xl px-42 py-8 bg-red-600 text-white font-semibold 
-          text-base sm:text-lg md:text-xl rounded-full shadow-lg overflow-hidden 
-          transition transform hover:scale-105 duration-300 ease-out text-center"
+        className="relative w-80 py-6 
+    bg-red-600 text-white font-semibold 
+    text-base sm:text-lg md:text-xl rounded-full shadow-lg overflow-hidden 
+    transition transform hover:scale-105 duration-300 ease-out text-center"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        Apply Now ..!
+        Apply Now
         <span className="animate-cross-line"></span>
       </motion.a>
+
     </motion.div>
   );
 }
