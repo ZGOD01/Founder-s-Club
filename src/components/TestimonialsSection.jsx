@@ -38,9 +38,9 @@ export default function TestimonialsMarquee() {
   ];
 
   return (
-    <section className="bg-white text-black pt-0 pb-4 md:py-10">
+    <section className="bg-white text-black pt-4 pb-4 md:pt-6 md:pb-8">
       {/* Heading */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 mt-2 md:mt-0">
         <h2 className="text-3xl md:text-4xl font-bold px-2">
           See How Coaches Just Like You{" "}
           <span className="text-blue-600">Scaled to 7 Figures</span>
