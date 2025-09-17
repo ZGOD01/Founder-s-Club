@@ -1,0 +1,45 @@
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Pause animation on hover */
+.marquee-track.paused {
+  animation-play-state: paused;
+}
+
+/* Mobile-only: Manual scroll, NO animation */
+@media (max-width: 767px) {
+  .marquee-wrapper {
+    overflow-x: auto; /* Enables manual horizontal scroll */
+    overflow-y: hidden;
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .marquee-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .marquee-track {
+    width: fit-content; /* Allow natural width */
+    animation: none; /* ❌ No auto-scroll */
+  }
+}
+
+/* Desktop: Center content */
+@media (min-width: 768px) {
+  .marquee-wrapper {
+    overflow: hidden; /* Hide scrollbar */
+  }
+  .marquee-track {
+    animation: none;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+}
