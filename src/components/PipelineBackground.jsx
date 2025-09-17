@@ -98,7 +98,7 @@ const Pipeline = () => {
             <ul className="list-disc list-outside text-xs sm:text-sm space-y-2 ml-4">
               <li>₹10L/month predictable revenue</li>
               <li>Qualified clients booking calls daily</li>
-              <li>You focus only on coaching + closing</li>
+              <li>You focus only on delivering results</li>
             </ul>
           </div>
 
