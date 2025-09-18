@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import TestimonialsMarquee from './components/TestimonialsSection';
 import BeforeAfterMarquee from './components/BeforeAfterMarquee';
 import StickyBar from './components/StickyBar'; // import your StickyBar
+import BusinessBreakthrough from './components/BusinessBreakthrough';
+import WorkshopWarning from './components/WorkshopWarning';
 
 function App() {
   return (
@@ -13,9 +15,11 @@ function App() {
       <Hero />
       <TestimonialsMarquee />
       <BeforeAfterMarquee />
+      <BusinessBreakthrough />
+      <WorkshopWarning />
 
       {/* Sticky bar always at the bottom */}
-      <StickyBar />
+      {/* <StickyBar /> */}
     </>
   );
 }
