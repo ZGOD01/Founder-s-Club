@@ -28,11 +28,11 @@ export default function BusinessBreakthrough() {
     <section className="bg-white py-4 px-6">
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto mb-16">
-        <span className="text-2xl tracking-widest text-[#d4b98c] uppercase">
+        <span className="text-2xl tracking-widest text-sky-500 uppercase font-bold">
           Business Growth
         </span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2">
-          What will change in your business after a 1-1 consultation call
+        <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gray-800">
+          What Will Change In Your Business After a 1-1 Consultation Call
         </h2>
       </div>
 
@@ -51,7 +51,9 @@ export default function BusinessBreakthrough() {
             </div>
 
             {/* Title & Description */}
-            <h3 className="text-xl font-semibold mt-6">{step.title}</h3>
+            <h3 className="text-xl font-semibold mt-6 text-gray-800">
+              {step.title}
+            </h3>
             <p className="text-gray-600 mt-2">{step.desc}</p>
           </div>
         ))}
