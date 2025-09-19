@@ -10,6 +10,7 @@ const bonusesData = [
     description:
       "Get 10+ private recorded lectures where I walk you step-by-step through setting up AI automation for client acquisition, lead follow-ups, and business growth.\n No tech overwhelm. No random YouTube rabbit holes. Just a clear roadmap to mastering the exact AI tools we use daily to enroll 50+ high-ticket clients per month.",
     value: "₹12,000 Value",
+    cardType: "card1", // Added this line
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const bonusesData = [
     description:
       "Design your entire service business in one simple page. Map your offer, clients, pricing, and funnels clearly—so you always know exactly what to do next to scale fast.",
     value: "₹7,000 Value",
+    cardType: "card2", // Added this line
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const bonusesData = [
     description:
       "Skip the trial-and-error. Plug in your business and start attracting leads instantly with ready-to-use AI-powered funnel templates that generate high-ticket prospects on autopilot.",
     value: "₹6,000 Value",
+    cardType: "card3", // Added this line
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const bonusesData = [
     description:
       "Access proven scripts, emails, and messages to attract premium leads without cold-calling or guesswork. Just copy, paste, and watch your pipeline fill.",
     value: "₹5,000 Value",
+    cardType: "card4", // Added this line (repeating the pattern)
   },
   {
     id: 5,
@@ -42,6 +46,7 @@ const bonusesData = [
     description:
       "Track clients, leads, and revenue with one dashboard. See what’s working, automate follow-ups, and scale confidently with data-driven insights.",
     value: "₹6,000 Value",
+    cardType: "card5", // Added this line
   },
   {
     id: 6,
@@ -50,6 +55,7 @@ const bonusesData = [
     description:
       "Join a community of ambitious service owners getting results with AI. Weekly Q&A sessions ensure you never get stuck and can implement strategies fast.",
     value: "₹6,299 Value",
+    cardType: "card6", // Added this line
   },
   {
     id: 7,
@@ -58,6 +64,7 @@ const bonusesData = [
     description:
       "Get the exact step-by-step sales script top 1% online business owners use to consistently close high-ticket clients and scale beyond 7 figures.\n No guessing, no trial-and-error—just plug in your offer and follow the proven system that turns calls into predictable revenue.",
     value: "₹7,000 Value",
+    cardType: "card7", // Added this line
   },
 ];
 
@@ -75,10 +82,19 @@ export default function Bonuses() {
           ( Previously Sold For ₹24,997 )
         </p>
 
-        {/* Grid updated: only 2 cards side by side max */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 justify-items-center">
-          {bonusesData.map((bonus) => (
-            <BonusCard key={bonus.id} bonus={bonus} />
+        {/* Updated Grid: uses Flexbox and grid to center the last item */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 **justify-items-center**">
+          {bonusesData.map((bonus, index) => (
+            <div
+              key={bonus.id}
+              className={`flex justify-center w-full ${
+                index === bonusesData.length - 1 && bonusesData.length % 2 !== 0
+                  ? 'sm:col-span-2'
+                  : ''
+              }`}
+            >
+              <BonusCard bonus={bonus} />
+            </div>
           ))}
         </div>
       </div>
