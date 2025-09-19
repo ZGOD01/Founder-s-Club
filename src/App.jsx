@@ -10,7 +10,6 @@ import WorkshopWarning from './components/WorkshopWarning';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import BackToTop from './components/BackToTop';
-import Bonuses from './components/Bonuses';
 
 // Import your pages
 import Terms from './pages/Terms';
@@ -23,6 +22,7 @@ import Header from './components/Header';
 import QASection from './components/QASection';
 import ConsultationTopics from './components/ConsultationTopics';
 import MeetYourMentor from './components/MeetYourMentor';
+import Bonuses from './components/Bonuses';
 
 function App() {
   return (
@@ -63,6 +63,6 @@ function App() {
       <BackToTop />
     </Router>
   );
-}
+} 
 
 export default App;
