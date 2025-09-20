@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Hero from './components/Hero';
 import TestimonialsMarquee from './components/TestimonialsSection';
@@ -35,12 +35,16 @@ function App() {
           path="/"
           element={
             <>
-              <Header />   
+              <Header />
               <Hero />
               <TestimonialsMarquee />
               <BeforeAfterMarquee />
               <BusinessBreakthrough />
               <WorkshopWarning />
+              <ConsultationTopics />
+              <Bonuses />
+              <MeetYourMentor />
+              <QASection />
               <StickyBar />
             </>
           }
@@ -55,14 +59,11 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <ConsultationTopics />
-      <Bonuses />
-      <MeetYourMentor />
-      <QASection />
+
       <Footer />
       <BackToTop />
     </Router>
   );
-} 
+}
 
 export default App;

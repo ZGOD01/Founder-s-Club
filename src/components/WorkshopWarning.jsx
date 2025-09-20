@@ -1,81 +1,88 @@
+// src/components/WorkshopInfo.jsx
 import React from "react";
 
-export default function WorkshopVisualEditorial() {
-  const reasons = [
-    "You Are Not A Business Owner",
-    "You Are Not An Action Taker",
-    "You Are Not Serious About Your Business",
-  ];
-
+export default function WorkshopInfo() {
   return (
-    <section className="bg-white py-20 px-6">
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h3 className="text-3xl font-bold text-blue-400 uppercase mb-4">
-          Who This Workshop Is Really For
-        </h3>
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-          To online service-business owners ready to scale — this system is built for you.
-          No fluff, just proven strategies, smart systems, and AI automation to take your
-          business to <span className="font-semibold text-gray-900">7–8 figures</span>.
+    <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
+          Who This Workshop Will Help The Best?
+        </h2>
+
+        {/* 🔥 Added descriptive text below headline */}
+        <p className="text-center text-gray-700 text-lg md:text-xl mb-12">
+          To Online service-business owners who are ready to scale.. this system is built for you. 
+          No fluff, no generic advice, just proven strategies, smart systems and AI automation to 
+          take your business all the way to 7–8 figures with clarity and speed
         </p>
-      </div>
 
-      {/* Visual Section - Recreating the Image Design with more attractive central element */}
-      <div className="relative flex items-center justify-center min-h-[500px] max-w-6xl mx-auto">
-        {/* Central "DON'T JOIN IF" circle-segment - MORE ATTRACTIVE */}
-        <div className="relative w-[300px] h-[300px] flex items-center justify-center">
-          {/* Main background circle for shadow and general shape */}
-          <div className="absolute w-[260px] h-[260px] rounded-full bg-gradient-to-br from-[#d4b98c] to-[#a0845a] shadow-xl flex items-center justify-center">
-             {/* The Text "DON'T JOIN IF" */}
-             <div className="relative z-10 text-center font-extrabold text-white leading-tight drop-shadow-md">
-                <h4 className="text-4xl">
-                  DON'T <br /> JOIN <br /> IF
-                </h4>
-              </div>
-          </div>
-         
-          {/* Overlaying "petal" segments to create the gaps - slightly transparent for depth */}
-          {/* Top segment */}
-          <div
-            className="absolute bg-white/30 backdrop-blur-sm w-[130px] h-[130px] rounded-full"
-            style={{ top: "-10px", left: "50%", transform: "translateX(-50%) rotate(20deg)" }}
-          ></div>
-          {/* Bottom segment */}
-          <div
-            className="absolute bg-white/30 backdrop-blur-sm w-[130px] h-[130px] rounded-full"
-            style={{ bottom: "-10px", left: "50%", transform: "translateX(-50%) rotate(-20deg)" }}
-          ></div>
-          {/* Right segment */}
-          <div
-            className="absolute bg-white/30 backdrop-blur-sm w-[130px] h-[130px] rounded-full"
-            style={{ top: "50%", right: "-10px", transform: "translateY(-50%) rotate(90deg)" }}
-          ></div>
-        </div>
-
-        {/* Reason Callouts with lines */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          {/* Reason 1 (Top Right) */}
-          <div className="absolute top-10 right-10 flex items-center space-x-4 pointer-events-auto">
-            <div className="w-12 h-0.5 bg-gray-400 transform rotate-12 -translate-x-4"/> {/* Line */}
-            <div className="bg-[#fdf6ec] rounded-lg p-4 shadow-md text-gray-800 font-semibold text-sm">
-              {reasons[0]}
+        <div className="relative flex flex-col md:flex-row items-center justify-center gap-8">
+          {/* Circle - moved further left 🔥 */}
+          <div className="flex-shrink-0 flex items-center md:h-[240px] justify-center md:justify-start md:-ml-20">
+            <div className="w-36 h-36 rounded-full bg-sky-500 flex items-center justify-center text-center font-bold text-white text-lg shadow-[0_0_25px_5px_rgba(14,165,233,0.7)]">
+              DON’T <br /> JOIN IF
             </div>
           </div>
 
-          {/* Reason 2 (Middle Right) */}
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 flex items-center space-x-4 pointer-events-auto">
-            <div className="w-12 h-0.5 bg-gray-400 -translate-x-4"/> {/* Line */}
-            <div className="bg-[#fdf6ec] rounded-lg p-4 shadow-md text-gray-800 font-semibold text-sm">
-              {reasons[1]}
+          {/* Arrows + Boxes (unchanged) */}
+          <div className="relative flex flex-col space-y-6 z-10">
+            <div className="w-72 h-16 bg-gray-50 border border-gray-200 rounded-xl shadow-md flex items-center px-4 font-medium text-gray-800 relative">
+              You Are Not A Business Owner
             </div>
-          </div>
+            <div className="w-72 h-16 bg-gray-50 border border-gray-200 rounded-xl shadow-md flex items-center px-4 font-medium text-gray-800 relative">
+              You Are Not An Action Taker
+            </div>
+            <div className="w-72 h-16 bg-gray-50 border border-gray-200 rounded-xl shadow-md flex items-center px-4 font-medium text-gray-800 relative">
+              You Are Not Serious About Your Business
+            </div>
 
-          {/* Reason 3 (Bottom Right) */}
-          <div className="absolute bottom-10 right-10 flex items-center space-x-4 pointer-events-auto">
-            <div className="w-12 h-0.5 bg-gray-400 transform -rotate-12 -translate-x-4"/> {/* Line */}
-            <div className="bg-[#fdf6ec] rounded-lg p-4 shadow-md text-gray-800 font-semibold text-sm">
-              {reasons[2]}
-            </div>
+            {/* SVG Arrows overlay */}
+            <svg
+              className="hidden md:block absolute left-[-160px] top-0 h-full w-[160px] pointer-events-none z-0"
+              viewBox="0 0 160 240"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <marker
+                  id="arrowhead"
+                  markerWidth="8"
+                  markerHeight="8"
+                  refX="6"
+                  refY="4"
+                  orient="auto"
+                >
+                  <path d="M0 0 L8 4 L0 8 z" fill="#0ea5e9" />
+                </marker>
+              </defs>
+
+              <path
+                d="M70 80 C110 60, 130 50, 150 40"
+                stroke="#0ea5e9"
+                strokeWidth="3"
+                fill="none"
+                markerEnd="url(#arrowhead)"
+                strokeLinecap="round"
+              />
+
+              <path
+                d="M70 120 C110 120, 130 120, 150 120"
+                stroke="#0ea5e9"
+                strokeWidth="3"
+                fill="none"
+                markerEnd="url(#arrowhead)"
+                strokeLinecap="round"
+              />
+
+              <path
+                d="M70 160 C110 180, 130 190, 150 200"
+                stroke="#0ea5e9"
+                strokeWidth="3"
+                fill="none"
+                markerEnd="url(#arrowhead)"
+                strokeLinecap="round"
+              />
+            </svg>
           </div>
         </div>
       </div>
