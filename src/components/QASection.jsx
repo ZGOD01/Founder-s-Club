@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "When can I access the bonuses?",
     answer:
-      "You can access the bonuses after the 3 DAY LIVE event is finished!",
+      "You can access the bonuses once the 1-on-1 Consultation Call is finished!",
   },
   {
     question: "What if I am just starting out?",

@@ -9,7 +9,7 @@ export default function Hero() {
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight mx-auto">
           <span className="block text-black">
             How I Enroll{" "}
-            <span className="text-blue-600 bg-yellow-100">50 High-Ticket Clients</span> Every
+            <span className="text-blue-600 bg-yellow-100">50+ High-Ticket Clients</span> Every
             Month in My{" "}
             <span className="text-blue-600">Online Service Business</span>{" "}
             Using an{" "}

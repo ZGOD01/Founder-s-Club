@@ -67,7 +67,7 @@ export default function TestimonialsMarquee() {
       {/* Heading */}
       <div className="text-center mb-12 mt-2 md:mt-0">
         <h2 className="text-3xl md:text-4xl font-bold px-2">
-          See How Coaches Just Like You{" "}
+          See How Business Owners Just Like You{" "}
           <span className="text-blue-600">Scaled to 7 Figures</span>
         </h2>
       </div>

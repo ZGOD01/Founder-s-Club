@@ -8,7 +8,7 @@ export default function WorkshopInfo() {
       <CallToActionButton />
       <div className="max-w-4xl mx-auto pt-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
-          Who This Workshop Will Help The Best?
+          Who This 1-1 Consultation Will Help The Best ?
         </h2>
 
         <p className="text-center text-gray-700 text-lg md:text-xl mb-12">
