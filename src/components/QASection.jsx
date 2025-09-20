@@ -47,7 +47,7 @@ export default function QASection() {
   }, [openIndex]);
 
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-10">
       <div className="absolute inset-0 z-0">
         <div className="h-full w-full bg-white opacity-50"></div>
         <div className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-purple-200 opacity-20 blur-3xl"></div>

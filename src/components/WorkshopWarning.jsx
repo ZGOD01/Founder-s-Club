@@ -1,10 +1,12 @@
 // src/components/WorkshopInfo.jsx
 import React from "react";
+import CallToActionButton from "./CallToActionButton";
 
 export default function WorkshopInfo() {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-white py-6 px-6 md:px-12 lg:px-24">
+      <CallToActionButton />
+      <div className="max-w-4xl mx-auto pt-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">
           Who This Workshop Will Help The Best?
         </h2>

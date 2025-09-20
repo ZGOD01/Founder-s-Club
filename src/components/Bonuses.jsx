@@ -1,5 +1,6 @@
 import React from "react";
 import BonusCard from "./BonusCard";
+import CallToActionButton from "./CallToActionButton";
 
 // Define the bonusesData array directly within the component file
 const bonusesData = [
@@ -70,8 +71,9 @@ const bonusesData = [
 
 export default function Bonuses() {
   return (
-    <section className="relative py-12 bg-white text-black overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section className="relative py-8 bg-white text-black overflow-hidden">
+      <CallToActionButton />
+      <div className="max-w-6xl mx-auto px-6 pt-4 text-center">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-600 drop-shadow-lg">
             Get INSANE Bonuses

@@ -1,11 +1,14 @@
 // src/components/MeetYourMentor.jsx
 import React from "react";
 import mentorImg from "../assets/Abhay.png"; // replace with your image
+import CallToActionButton from "./CallToActionButton";
 
 export default function MeetYourMentor() {
   return (
-    <section className="relative bg-white py-20 px-6 md:px-12 lg:px-24">
-      <div className="max-w-6xl mx-auto border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
+    <section className="relative bg-white py-4 px-6 md:px-12 lg:px-24">
+      
+        <CallToActionButton/>
+      <div className="mt-3 max-w-6xl mx-auto border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center">
           {/* Image - Stacked on top for mobile */}
           <div className="order-1 md:order-2 h-full flex items-stretch">

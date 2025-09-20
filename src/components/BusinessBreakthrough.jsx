@@ -1,6 +1,7 @@
 // src/components/BusinessBreakthrough.jsx
 import React from "react";
 import { Brain, Cog, Rocket } from "lucide-react";
+import CallToActionButton from "./CallToActionButton";
 
 export default function BusinessBreakthrough() {
   const steps = [
@@ -25,9 +26,10 @@ export default function BusinessBreakthrough() {
   ];
 
   return (
-    <section className="bg-white py-4 px-6">
+    <section className="bg-white  px-6">
+      <CallToActionButton />
       {/* Heading */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      <div className="text-center max-w-2xl mx-auto pt-6 mb-16">
         <span className="text-2xl tracking-widest text-sky-500 uppercase font-bold">
           Business Growth
         </span>

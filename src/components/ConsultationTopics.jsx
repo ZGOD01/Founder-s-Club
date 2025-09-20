@@ -1,5 +1,6 @@
 import { CircleCheckBig } from "lucide-react";
 import { motion } from "framer-motion";
+import CallToActionButton from "./CallToActionButton";
 
 export default function ConsultationTimeline() {
   const topics = [
@@ -32,8 +33,8 @@ export default function ConsultationTimeline() {
   };
 
   return (
-    <section className="bg-white py-16 px-6 lg:px-20">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="bg-white py-4 px-6 lg:px-20">
+      <div className="max-w-4xl mx-auto text-center pt-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           🚀 What We Will Cover in Your{" "}
           <span className="text-indigo-600">1-1 Consultation</span>
