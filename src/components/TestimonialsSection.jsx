@@ -9,6 +9,8 @@ import video2 from "../assets/Aniket.mp4";
 
 export default function TestimonialsMarquee() {
   const [isMarqueePaused, setIsMarqueePaused] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState(null);
 
   const testimonials = [
     {
@@ -36,6 +38,29 @@ export default function TestimonialsMarquee() {
       image: sula,
     },
   ];
+
+  const handleVideoClick = (videoSrc, event) => {
+    const videoElement = event.currentTarget;
+    if (window.innerWidth < 768) {
+      // On mobile, show modal
+      setIsModalOpen(true);
+      setCurrentVideo(videoSrc);
+      videoElement.pause(); // Pause the marquee video when modal opens
+    } else {
+      // On desktop, toggle play/pause and mute/unmute
+      if (videoElement.paused) {
+        videoElement.play();
+        videoElement.muted = false; // Unmute on play
+      } else {
+        videoElement.pause();
+      }
+    }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setCurrentVideo(null);
+  };
 
   return (
     <section className="bg-white text-black pt-4 pb-4 md:pt-6 md:pb-8">
@@ -89,25 +114,43 @@ export default function TestimonialsMarquee() {
           onMouseLeave={() => setIsMarqueePaused(false)}
         >
           <video
-            className="w-[260px] sm:w-[300px] md:w-[300px] h-[300px] object-cover rounded-xl shadow-lg flex-shrink-0"
-            controls
+            className="w-[260px] sm:w-[300px] md:w-[300px] h-[450px] object-cover rounded-xl shadow-lg flex-shrink-0 cursor-pointer"
             src={video1}
             autoPlay
             loop
             muted
             playsInline
+            controls
+            onClick={(e) => handleVideoClick(video1, e)}
           />
           <video
-            className="w-[260px] sm:w-[300px] md:w-[300px] h-[300px] object-cover rounded-xl shadow-lg flex-shrink-0"
-            controls
+            className="w-[260px] sm:w-[300px] md:w-[300px] h-[450px] object-cover rounded-xl shadow-lg flex-shrink-0 cursor-pointer"
             src={video2}
             autoPlay
             loop
             muted
             playsInline
+            controls
+            onClick={(e) => handleVideoClick(video2, e)}
           />
         </div>
       </div>
+
+      {/* Full-Screen Video Modal */}
+      {isModalOpen && (
+        <div className="video-modal-overlay" onClick={handleCloseModal}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <video
+              className="modal-video"
+              src={currentVideo}
+              controls
+              autoPlay
+              playsInline
+            />
+            <button className="close-button" onClick={handleCloseModal}>&times;</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
