@@ -1,6 +1,6 @@
 // src/components/MeetYourMentor.jsx
 import React from "react";
-import mentorImg from "../assets/Abhay.png"; // replace with your image
+import mentorImg from "../assets/AbhayProfile.png"; 
 import CallToActionButton from "./CallToActionButton";
 
 export default function MeetYourMentor() {
