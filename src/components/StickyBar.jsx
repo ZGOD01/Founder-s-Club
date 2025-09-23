@@ -22,6 +22,18 @@ const StickyBar = () => {
         return () => clearInterval(myInterval);
     }, [minutes, seconds]);
 
+    const handleClick = () => {
+        if (window.pagesense) {
+            window.pagesense.push(["trackEvent", "cta_button_click"]);
+        } else {
+            console.error("Zoho PageSense not loaded. Unable to track custom event.");
+        }
+
+        // Redirect to Zoho Bookings
+        window.location.href =
+            "https://scale100million.zohobookings.in/#/300029000000208032";
+    };
+
     return (
         <div className="fixed bottom-0 left-0 w-full bg-white p-4 shadow-lg flex items-center justify-between border-t border-gray-200 lg:px-20 z-[1000] space-x-2 sm:space-x-6">
             
@@ -41,11 +53,13 @@ const StickyBar = () => {
                 <div className="bg-slate-800 text-white font-semibold text-xs px-3 py-1 rounded-full absolute -top-3 right-3 text-center">
                     3 Slots Left
                 </div>
-                <button className="bg-red-600 text-white font-semibold text-base sm:text-lg rounded-3xl shadow-lg overflow-hidden transition transform px-6 sm:px-8 py-3 sm:py-4 whitespace-normal text-center max-w-[250px] sm:max-w-[300px]">
+                <button
+                    onClick={handleClick}
+                    className="bg-red-600 text-white font-semibold text-base sm:text-lg rounded-3xl shadow-lg overflow-hidden transition transform px-6 sm:px-8 py-3 sm:py-4 whitespace-normal text-center max-w-[250px] sm:max-w-[300px]"
+                >
                     Apply Now
                 </button>
             </div>
-
         </div>
     );
 };
