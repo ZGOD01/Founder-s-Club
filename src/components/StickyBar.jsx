@@ -35,8 +35,8 @@ const StickyBar = () => {
     };
 
     return (
-        <div className="fixed bottom-0 left-0 w-full bg-white p-4 shadow-lg flex items-center justify-between border-t border-gray-200 lg:px-20 z-[1000] space-x-2 sm:space-x-6">
-            
+        <div className="fixed bottom-0 left-0  w-full bg-white p-4 shadow-lg flex items-center justify-between border-t border-gray-200 lg:px-20 z-[1000] space-x-2 sm:space-x-6">
+
             {/* Left-aligned content */}
             <div className="flex flex-col items-start space-y-1 min-w-[120px]">
                 <div className="text-red-600 text-2xl font-bold">
@@ -55,10 +55,11 @@ const StickyBar = () => {
                 </div>
                 <button
                     onClick={handleClick}
-                    className="bg-red-600 text-white font-semibold text-base sm:text-lg rounded-3xl shadow-lg overflow-hidden transition transform px-6 sm:px-8 py-3 sm:py-4 whitespace-normal text-center max-w-[250px] sm:max-w-[300px]"
+                    className="bg-red-600 text-white font-semibold text-base sm:text-lg rounded-3xl shadow-lg overflow-hidden transition transform px-6 py-3 sm:px-8 sm:py-4 whitespace-normal text-center w-[200px] sm:w-[240px] lg:w-[280px]"
                 >
                     Apply Now
                 </button>
+
             </div>
         </div>
     );
